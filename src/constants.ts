@@ -1,1 +1,1 @@
-export const ENDPOINT_BASE = "/";
+export const ENDPOINT_BASE = "/v1";
