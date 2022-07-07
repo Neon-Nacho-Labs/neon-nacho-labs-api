@@ -5,7 +5,13 @@ import cors from 'cors';
 
 const bodyParser = require('body-parser')
 const corsOptions = {
-	origin: [ 'http://localhost:3000' ], // Allowed origins
+	// Allowed origins
+	origin: [
+		'http://localhost:3000',
+		'https://localhost:3000',
+		'http://neonnacho.xyz',
+		'https://neonnacho.xyz'
+	],
 	optionsSuccessStatus: 200
 }
 
@@ -16,7 +22,7 @@ app.use( bodyParser.json() );
 app.use( '/', router );
 
 // Start the application by listening to specific port
-const port = Number( process.env.PORT || config.PORT || 8080 );
+const port = Number( process.env.PORT || config.PORT || 80 );
 app.listen( port, () => {
 	console.info('Express application started on port: ' + port);
 });
