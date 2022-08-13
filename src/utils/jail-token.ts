@@ -2,7 +2,8 @@
 
 require( 'dotenv' ).config();
 const Moralis = require( 'moralis/node' );
-const ETH_CHAIN = 'goerli';
+// const ETH_CHAIN = 'goerli';
+const ETH_CHAIN = 'eth'; // eth = mainnet
 
 const createAndSaveImage = async ( tokenImageURL: string, uniqueName: string ) => {
 	console.log( 'in createImage' );
